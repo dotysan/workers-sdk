@@ -90,6 +90,7 @@ export const gitCommit = async (ctx: C3Context) => {
 	});
 
 	await runCommand(["git", "commit", "-m", commitMessage], {
+		useSpinner: false,
 		silent: true,
 		cwd: ctx.project.path,
 	});
